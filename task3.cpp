@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int sumOfDigits(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return (n % 10) + sumOfDigits(n / 10);
+}
+
+int main() {
+    int n;
+    cout << "Enter a positive integer: ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "Please enter a positive integer" << endl;
+        return 0;
+    }
+
+    cout << "Sum of digits: " << sumOfDigits(n) << endl;
+
+    return 0;
+}
